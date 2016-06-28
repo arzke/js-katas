@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "webpack",
     "test": "mocha test/test.bundle.js"
   },
   "author": "Bruno Arsene",
