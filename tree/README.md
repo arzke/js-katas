@@ -13,7 +13,7 @@ npm install
 You have to build files with webpack:
 
 ```
-webpack
+npm run build
 ```
 
 *Note that you can use the -w flag to enable the watcher.*
