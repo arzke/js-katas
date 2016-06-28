@@ -30,5 +30,5 @@ node bin/app.bundle.js
 To run the unit tests:
 
 ```
-mocha test/test.bundle.js
+npm run test
 ```
