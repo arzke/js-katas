@@ -36,4 +36,5 @@ const tree = [
   }
 ];
 
-module.exports = tree;
+
+export default tree;
