@@ -10,13 +10,16 @@ npm install
 
 ## Run
 
-You have to build files with webpack:
+You have to build files with webpack (with watchers and .map files):
 
 ```
-npm run build
+npm run build:dev
 ```
 
-*Note that you can use the -w flag to enable the watcher.*
+You can also build it for 'production' purpose
+```
+npm run build:prod
+```
 
 Then, simply run the bundle:
 
@@ -27,5 +30,5 @@ node bin/app.bundle.js
 To run the unit tests:
 
 ```
-mocha test/test.bundle.js
+npm run test
 ```
