@@ -88,4 +88,44 @@ describe('Tree', () => {
     });
   });
 
+  describe('.hasChildren()', function () {
+    let node;
+
+    describe('when it gets a node with no children attribute', function () {
+      beforeEach(function () {
+        node = {};
+      });
+
+      it('should be false', function () {
+        Tree.hasChildren(node).should.be.false;
+      });
+    });
+
+    describe('when it gets a node with an empty array for children', function () {
+      beforeEach(function () {
+        node = {
+          children: []
+        };
+      });
+
+      it('should be false', function () {
+        Tree.hasChildren(node).should.be.false;
+      });
+    });
+
+    describe('when it gets a node with a child', function () {
+      beforeEach(function () {
+        node = {
+          children: [
+            {}
+          ]
+        };
+      });
+
+      it('should be true', function () {
+        Tree.hasChildren(node).should.be.true;
+      });
+    });
+  });
+
 });

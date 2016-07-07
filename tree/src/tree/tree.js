@@ -12,7 +12,7 @@ class Tree {
   }
 
   static hasChildren(node) {
-    return node.children && node.children.length > 0;
+    return node.hasOwnProperty('children') && node.children.length > 0;
   }
 
 }
