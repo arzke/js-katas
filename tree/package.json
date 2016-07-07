@@ -8,7 +8,7 @@
     "build:prod": "webpack -p",
     "test": "mocha test/test.bundle.js"
   },
-  "author": "Bruno Arsene",
+  "author": "Bruno Arsene <arsene.bruno@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.10.4",
