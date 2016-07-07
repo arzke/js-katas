@@ -4,15 +4,9 @@ class Tree {
     this.treeData = treeData;
   }
 
-  getLeaves(nodes) {
-    nodes = nodes || this.treeData;
-
-    return nodes.reduce((leaves, node) => {
-      if(Tree.hasChildren(node)) {
-        return leaves.concat(this.getLeaves(node.children));
-      }
-
-      leaves.push(node);
+  getLeaves() {
+    return [this.treeData].reduce(function flattenChildren(leaves, child) {
+      Tree.hasChildren(child) ? child.children.reduce(flattenChildren, leaves) : leaves.push(child);
       return leaves;
     }, []);
   }

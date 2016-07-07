@@ -4,29 +4,19 @@ describe('Tree', () => {
   let tree;
 
   describe('#getLeaves()', () => {
-    describe('when it gets an empty tree', () => {
-      beforeEach(function() {
-        tree = new Tree([]);
-      });
-
-      it('should return an empty tree', () => {
-        tree.getLeaves().should.eql([]);
-      });
-    });
-
     describe('when it gets a tree with one element', () => {
       let treeData;
 
       beforeEach(function() {
-        treeData = [{
+        treeData = {
           id: 42
-        }];
+        };
 
         tree = new Tree(treeData);
       });
 
-      it('should return the same tree', () => {
-        tree.getLeaves().should.eql(treeData);
+      it('should return that element', () => {
+        tree.getLeaves().should.eql([treeData]);
       });
     });
 
@@ -34,14 +24,14 @@ describe('Tree', () => {
       let treeData;
 
       beforeEach(function() {
-        treeData = [{
+        treeData = {
           id: 42,
           children: [
             {
               id: 43
             }
           ]
-        }];
+        };
 
         tree = new Tree(treeData);
       });
@@ -59,7 +49,7 @@ describe('Tree', () => {
       let treeData;
 
       beforeEach(function() {
-        treeData = [{
+        treeData = {
           id: 42,
           children: [
             {
@@ -77,7 +67,7 @@ describe('Tree', () => {
               ]
             }
           ]
-        }];
+        };
 
         tree = new Tree(treeData);
       });
@@ -94,13 +84,6 @@ describe('Tree', () => {
             id: 46
           }
         ]);
-      });
-
-      it('should not change original structure', function() {
-        let originalTreeData = Object.assign([], treeData);
-        tree.getLeaves();
-
-        tree.treeData.should.eql(originalTreeData);
       });
     });
   });
