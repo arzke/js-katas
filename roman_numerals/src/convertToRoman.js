@@ -1,12 +1,11 @@
-function convertToRoman(number) {
-    if(number === 10) {
-        return 'X';
-    }
-    if(number === 5) {
-        return 'V';
-    }
+const numbers = {
+    1: 'I',
+    5: 'V',
+    10: 'X'
+};
 
-    return 'I';
+function convertToRoman(number) {
+    return numbers[number];
 }
 
 export default convertToRoman;
