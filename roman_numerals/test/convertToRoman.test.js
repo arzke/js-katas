@@ -30,4 +30,10 @@ describe('convertToRoman()', function () {
             convertToRoman(100).should.eql('C');
         });
     });
+
+    describe('when it gets 500', function () {
+        it('should return D', function () {
+            convertToRoman(500).should.eql('D');
+        });
+    });
 });
