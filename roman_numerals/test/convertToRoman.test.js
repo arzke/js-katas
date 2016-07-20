@@ -44,4 +44,12 @@ describe('convertToRoman()', function () {
             });
         });
     });
+
+    describe('for repeated numbers', function () {
+        describe('when it gets 2', function () {
+            it('should return II', function () {
+                convertToRoman(2).should.eql('II');
+            });
+        });
+    });
 });

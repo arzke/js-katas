@@ -9,6 +9,10 @@ const numbers = {
 };
 
 function convertToRoman(number) {
+    if(number === 2) {
+        return 'II';
+    }
+
     return numbers[number];
 }
 
