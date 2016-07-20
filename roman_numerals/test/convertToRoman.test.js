@@ -36,4 +36,10 @@ describe('convertToRoman()', function () {
             convertToRoman(500).should.eql('D');
         });
     });
+
+    describe('when it gets 1000', function () {
+        it('should return M', function () {
+            convertToRoman(1000).should.eql('M');
+        });
+    });
 });
