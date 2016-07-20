@@ -51,5 +51,11 @@ describe('convertToRoman()', function () {
                 convertToRoman(2).should.eql('II');
             });
         });
+
+        describe('when it gets 20', function () {
+            it('should return XX', function () {
+                convertToRoman(20).should.eql('XX');
+            });
+        });
     });
 });

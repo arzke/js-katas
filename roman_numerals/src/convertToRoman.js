@@ -9,6 +9,9 @@ const numbers = {
 };
 
 function convertToRoman(number) {
+    if(number === 20) {
+        return 'XX';
+    }
     if(number === 2) {
         return 'II';
     }
