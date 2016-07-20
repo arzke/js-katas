@@ -12,4 +12,10 @@ describe('convertToRoman()', function () {
             convertToRoman(5).should.eql('V');
         });
     });
+
+    describe('when it gets 10', function () {
+        it('should return X', function () {
+            convertToRoman(10).should.eql('X');
+        });
+    });
 });
