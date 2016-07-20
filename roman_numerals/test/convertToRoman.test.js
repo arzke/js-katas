@@ -18,4 +18,10 @@ describe('convertToRoman()', function () {
             convertToRoman(10).should.eql('X');
         });
     });
+
+    describe('when it gets 50', function () {
+        it('should return L', function () {
+            convertToRoman(50).should.eql('L');
+        });
+    });
 });
