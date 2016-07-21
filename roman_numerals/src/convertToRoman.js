@@ -11,8 +11,7 @@ const numbers = {
 function convertToRoman(number) {
     let suffix = '';
     if(number > 10 && number % 10 !== 0) {
-        let newNumber = Math.floor(number/10);
-        suffix = numbers[newNumber] || getClosestSmallerNumber(newNumber, numbers);
+        suffix = convertToRoman(+number.toString().substr(1));
     }
 
     return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0)) + suffix;

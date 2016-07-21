@@ -84,6 +84,12 @@ describe('convertToRoman()', function () {
             });
         });
 
+        describe('when it gets 12', function () {
+            it('should return XII', function () {
+                convertToRoman(12).should.eql('XII');
+            });
+        });
+
         describe('when it gets 21', function () {
             it('should return XXI', function () {
                 convertToRoman(21).should.eql('XXI');
