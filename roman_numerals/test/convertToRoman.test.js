@@ -76,4 +76,12 @@ describe('convertToRoman()', function () {
             });
         });
     });
+
+    describe('for compound numbers', function () {
+        describe('when it gets 11', function () {
+            it('should return XI', function () {
+                convertToRoman(11).should.eql('XI');
+            });
+        });
+    });
 });

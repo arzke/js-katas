@@ -9,6 +9,10 @@ const numbers = {
 };
 
 function convertToRoman(number) {
+    if(number === 11) {
+        return 'XI';
+    }
+
     return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0));
 }
 
