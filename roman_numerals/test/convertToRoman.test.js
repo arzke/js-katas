@@ -95,5 +95,11 @@ describe('convertToRoman()', function () {
                 convertToRoman(21).should.eql('XXI');
             });
         });
+
+        describe('when it gets 22', function () {
+            it('should return XXII', function () {
+                convertToRoman(22).should.eql('XXII');
+            });
+        });
     });
 });
