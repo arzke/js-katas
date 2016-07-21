@@ -13,7 +13,13 @@ function convertToRoman(number) {
         return '';
     }
 
-    return getNumber(number, numbers).repeat(numbers[number] ? 1 : number.toString().charAt(0)) + convertToRoman(+number.toString().substr(1));
+    let romanNumeral = getNumber(number, numbers);
+
+    if(romanNumeral.charAt(0) === 'V') {
+        return romanNumeral + convertToRoman(number - 5);
+    }
+
+    return romanNumeral.repeat(numbers[number] ? 1 : number.toString().charAt(0)) + convertToRoman(+number.toString().substr(1));
 }
 
 function getNumber(number, numbers) {
