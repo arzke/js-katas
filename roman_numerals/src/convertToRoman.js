@@ -9,12 +9,15 @@ const numbers = {
 };
 
 function convertToRoman(number) {
-    let suffix = '';
-    if(number > 10 && number % 10 !== 0) {
-        suffix = convertToRoman(+number.toString().substr(1));
+    if(number < 1 && number % 10 === 0) {
+        return '';
     }
 
-    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0)) + suffix;
+    return getNumber(number, numbers) + convertToRoman(+number.toString().substr(1));
+}
+
+function getNumber(number, numbers) {
+    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0));
 }
 
 function getClosestSmallerNumber(number, numbers) {
