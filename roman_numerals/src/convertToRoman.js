@@ -9,14 +9,12 @@ const numbers = {
 };
 
 function convertToRoman(number) {
-    if(number === 20) {
-        return 'XX';
-    }
-    if(number === 2) {
-        return 'II';
-    }
+    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(2);
+}
 
-    return numbers[number];
+function getClosestSmallerNumber(number, numbers) {
+    let smallerNumbers = Object.keys(numbers).filter(n => n < number);
+    return numbers[Math.max.apply(null, smallerNumbers)];
 }
 
 export default convertToRoman;
