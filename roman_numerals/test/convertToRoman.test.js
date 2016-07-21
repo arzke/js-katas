@@ -69,5 +69,11 @@ describe('convertToRoman()', function () {
                 convertToRoman(3).should.eql('III');
             });
         });
+
+        describe('when it gets 30', function () {
+            it('should return XXX', function () {
+                convertToRoman(30).should.eql('XXX');
+            });
+        });
     });
 });
