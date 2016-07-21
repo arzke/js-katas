@@ -9,14 +9,13 @@ const numbers = {
 };
 
 function convertToRoman(number) {
-    if(number === 21) {
-        return 'XXI';
-    }
-    if(number === 11) {
-        return 'XI';
+    let suffix = '';
+    if(number > 10 && number % 10 !== 0) {
+        let newNumber = Math.floor(number/10);
+        suffix = numbers[newNumber] || getClosestSmallerNumber(newNumber, numbers);
     }
 
-    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0));
+    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0)) + suffix;
 }
 
 function getClosestSmallerNumber(number, numbers) {
