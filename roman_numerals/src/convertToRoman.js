@@ -9,7 +9,7 @@ const numbers = {
 };
 
 function convertToRoman(number) {
-    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(2);
+    return numbers[number] || getClosestSmallerNumber(number, numbers).repeat(number.toString().charAt(0));
 }
 
 function getClosestSmallerNumber(number, numbers) {

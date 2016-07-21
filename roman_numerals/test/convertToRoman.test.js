@@ -63,5 +63,11 @@ describe('convertToRoman()', function () {
                 convertToRoman(200).should.eql('CC');
             });
         });
+
+        describe('when it gets 3', function () {
+            it('should return III', function () {
+                convertToRoman(3).should.eql('III');
+            });
+        });
     });
 });
