@@ -107,5 +107,11 @@ describe('convertToRoman() =>', () => {
                 convertToRoman(6).should.eql('VI');
             });
         });
+
+        describe('when it gets 4', () => {
+            it('should return IV', () => {
+                convertToRoman(4).should.eql('IV');
+            });
+        });
     });
 });
