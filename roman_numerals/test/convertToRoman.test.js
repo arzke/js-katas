@@ -120,4 +120,36 @@ describe('convertToRoman() =>', () => {
             });
         });
     });
+
+    describe('for complex numbers', () => {
+        describe('when it gets 509', () => {
+            it('should return DIX', () => {
+                convertToRoman(509).should.eql('DIX');
+            });
+        });
+
+        describe('when it gets 666', () => {
+            it('should return DCLXVI', () => {
+                convertToRoman(666).should.eql('DCLXVI');
+            });
+        });
+
+        describe('when it gets 1515', () => {
+            it('should return MDXV', () => {
+                convertToRoman(1515).should.eql('MDXV');
+            });
+        });
+
+        describe('when it gets 2002', () => {
+            it('should return MMII', () => {
+                convertToRoman(2002).should.eql('MMII');
+            });
+        });
+
+        describe('when it gets 4888', () => {
+            it('should return MMMMDCCCLXXXVIII', () => {
+                convertToRoman(4888).should.eql('MMMMDCCCLXXXVIII');
+            });
+        });
+    });
 });
