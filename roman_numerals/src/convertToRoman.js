@@ -15,11 +15,11 @@ function convertToRoman(number) {
         return '';
     }
 
-    let closestNumber = getNumber(number, numbers);
+    let closestNumber = getClosestSmallerNumber(number, numbers);
     return numbers[closestNumber] + convertToRoman(number - closestNumber);
 }
 
-function getNumber(number, numbers) {
+function getClosestSmallerNumber(number, numbers) {
     let smallerNumbers = Object.keys(numbers).filter(n => n <= number);
     return Math.max.apply(null, smallerNumbers);
 }
